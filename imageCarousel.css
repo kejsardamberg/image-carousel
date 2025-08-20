@@ -1,0 +1,277 @@
+
+
+/*
+-------------------------------------------------------
+
+    This is the CSS for the image carousel by 
+    Jörgen Damberg. This CSS file describes 
+    formatting for all components in the image 
+    carousel.
+
+-------------------------------------------------------
+*/
+
+
+/*
+The root element of the image carousel has the id of image-carousel-overlay.
+*/
+#image-carousel-overlay {
+    all: unset;
+    font-size: 16px;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*
+The close marker is the top X symbol to close the image carousel overlay.
+It's a container element holding the actual click element.
+*/
+#image-carousel-top-central-button-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 25px;
+}
+
+#image-carousel-top-icon-container {
+    display: flex;
+    width: fit-content;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(100, 100, 100, 0.4);
+    gap: 10px;
+}
+
+image-carousel-close-icon {
+    display: block;
+    height: 25px;
+}
+
+#image-carousel-overlay-close-marker {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 2rem;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    opacity: 0.4;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+#image-carousel-overlay-close-marker:hover {
+    opacity: 1;
+    background-color: rgba(100, 100, 100, 1);
+}
+
+image-carousel-download-icon {
+    display: block;
+    height: 21px;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    opacity: 1;
+    text-align: center;
+    width: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 25px;
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+image-carousel-download-icon:hover {
+    background-color: rgba(100, 100, 100, 1);
+    opacity: 1;
+}   
+
+image-carousel-download-icon a {
+    color: white;
+    width: 100%;
+    font-size: large;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+}
+
+image-carousel-new-tab-icon {
+    display: block;
+    height: 21px;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    opacity: 1;
+    text-align: center;
+    width: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 25px;
+    border: 2px solid white;
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+image-carousel-new-tab-icon:hover {
+    background-color: rgba(100, 100, 100, 1);
+    opacity: 1;
+}
+
+image-carousel-new-tab-icon a {
+    color: white;
+    width: 100%;
+    font-size: large;
+    text-decoration: none;
+}
+/*
+The browse symbols are the left and right arrows 
+to change displayed image in the carousel
+*/
+.image-carousel-browse-symbol {
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0.5);
+    opacity: 0.4;
+    cursor: pointer;
+    color: white;
+    padding: 20px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    top: 0px;
+    height: 100vh;
+    line-height: 100vh;
+    font-weight: bold;
+    font-size: large;
+}
+
+.image-carousel-browse-symbol:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+    opacity: 1;
+}
+
+/*
+The image-carousel-image is the clone of the original 
+image along with a text element on top of it.
+*/
+image-carousel-image {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;}
+
+image-carousel-image img {
+    all: unset;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+image-carousel-image img.fullsize {
+    object-fit: none;
+    border: 10px solid white;
+}
+
+image-carousel-image p {
+    all: unset;
+}
+
+image-carousel-image .image-carousel-image-text {
+    all: unset;
+    position: absolute;
+    background-color: yellow;
+    color: darkslategray;
+    text-wrap: wrap;
+    width: fit-content;
+    max-width: 60%;
+    text-align: center;
+    padding: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain; 
+}
+
+image-carousel-image .image-carouse-image-text-container {
+    width: 100%;
+}
+
+
+/*
+Original images are given a cursor pointer
+*/
+.image-carousel-cursor-pointer {
+    cursor: pointer;
+}
+
+
+/*
+The image-carousel-position-marker is the darker box with bright dots representing each image in the image carousel
+*/
+image-carousel-position-marker {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    bottom: 10%;
+}
+
+image-carousel-position-marker > #image-carousel-position-marker-container {
+    margin: auto;
+    border-radius: 0.5rem;
+    background: rgba(100, 100, 100, 0.5);
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    width: fit-content;
+}
+
+image-carousel-position-marker-dot {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+image-carousel-position-marker-dot.active {
+    color: white;
+    cursor: default;
+}
+
+@media (orientation: landscape) {
+
+    .image-carousel-browse-symbol{
+        padding: 20px;
+    }
+
+}
+  
+@media (orientation: portrait) {
+
+    .image-carousel-browse-symbol{
+        padding: 6px;
+    }
+  
+}
+
