@@ -8,7 +8,7 @@ This is a plain javascript library that uses a CSS locator expression to identif
 
 ## Try it out
 
-Try it out here: [https://damberg.one](https://damberg.one/alster/private/crafts/image-carousel/](https://damberg.one/alster/private/crafts/image-carousel/index.html)
+Try it out here: [https://damberg.one/alster/private/crafts/image-carousel/](https://damberg.one/alster/private/crafts/image-carousel/index.html)
 
 ## Features
 
@@ -108,7 +108,7 @@ The currently available settings in the object imageCarouselSettings, and their 
 
 
 |Field name|Default value|Description|
-|----------|-------------|-----------|
+|:---------|:-----------:|:----------|
 |imageCarouselSettings.millisecondsUntilHidingNavigationSymbols|2000|Delay (ms) until navigation elements are hidden|
 |imageCarouselSettings.millisecondsUntilHidingImageText|3000|Delay (ms) until image text is hidden|
 |imageCarouselSettings.hidingCheckIntervalInMilliseconds|50|Delay (ms) between checks for potentially hiding elements|
