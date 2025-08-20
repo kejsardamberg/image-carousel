@@ -49,6 +49,7 @@ Current features include:
     - Clickable position bullets for displaying image count and active image
 
 ### Programatic ease of use
+* Plain javascript/CSS; no risk of security issues from dependencies.
 * The image carousel should be a stand-alone Javascript class library and a CSS file.
 * Usage is initiated with a single image CSS locator expression as constructor parameter to enable ease of use on any web page.
 * Included images alt text is used as image text if they exist.
@@ -75,12 +76,12 @@ This is available under the [Apache 2.0 license](https://www.apache.org/licenses
 
 ## Usage
 
-Include both the following files:
+Include both the following files from this repository to your own solution:
 
 imageCarousel.js (Javascript class file for all functionality)   
 imageCarousel.css (visual style instructions)
 
-Include references to this file and the CSS file in the HEAD section of your HTML, like below:
+Include references to these files in the HEAD section of your HTML, like below:
 
     <head>
     
@@ -89,17 +90,24 @@ Include references to this file and the CSS file in the HEAD section of your HTM
     
         <script> 
             window.addEventListener("load", (event) => {
-                new ImageCarousel('.test-image', 'fullsize'); 
+                new ImageCarousel('img.image-included-in-image-carousel'); 
             });
         </script> 
     
     </head>
 
-The argument string is the CSS locator for identifying the images to include in the image carousel.
+It's important that the ImageCarousel component is loaded after the images are loaded to be able to identify all relevant images, hence the `window.onload` reference.
 
-If you want the image carousel to display full size images of the thumbnails on the actual page you may also include a path to full size images.
+### Arguments
 
-    new ImageCarousel('.image-for-carousel', './fullsizeimages/');
+#### Mandatory CSS locator
+
+The **first argument** (*CSS locator*) is a **mandatory** string is the CSS locator for identifying the images to include in the image carousel.
+
+#### Optional High-resolution image folder path
+The **second argument** (*High-resolution image folder path*) is an **optional** string that describe the relative path to as a reference for the image carousel to use higher resolution images from a specific folder rather than the potential low-resolution images used on the normal page for speed of page rendering and maximum image quality in the image carousel. If you want the image carousel to display higher resolution images of the low resolution images on the actual page you may also include a path to full size images:
+
+    new ImageCarousel('img.image-included-in-image-carousel', './high-resolution-image-folder-path/');
 
 ___________
 
